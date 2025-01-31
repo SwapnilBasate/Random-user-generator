@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins,monospace;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: #ddd;
+}
+.header{
+    width: 100%;
+    height: 60px;
+    background:navy;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 5%;
+    box-shadow: 0px 0px 10px rgba(222, 217, 217, 0.78);
+    color: white;
+}
+.header button{
+    padding: 10px 25px;
+    background: transparent;
+    color: white;
+    border-radius: 4px;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all ease-in 0.4s;
+    outline: none;
+}
+.header button:disabled{
+    background: lightsalmon;
+    color: black;
+    border: 2px solid bisque;
+    cursor: no-drop;
+}
+.container{
+    position: absolute;
+    width: 350px;
+    max-height: 450px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    box-shadow: 2x 5px 20px rgba(0, 0, 0, 0.28);
+    transform: translate(-50% ,-50%);
+    padding: 8px 20px;
+    transition: all ease-in 0.4s;
+}
+.container .loading{
+    width: 100%;
+    padding: 10px;
+    display: block;
+    opacity: 1;
+}
+.container .profile-picture{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .profile-picture img{
+    width: 100px;
+    height: 100px;
+    border-radius: 60%;
+    object-fit: cover;
+    border: 5px solid navy;
+}
+.container .info{
+    opacity: 0;
+    display: none;
+    transition: all ease-in 0.4s;
+}
+.container .info .profile-picture label{
+    font-size: 1.05em;
+    font-weight: 600;
+}
+.container .info p{
+    font-size: 0.94em;
+}
+.container .info .field{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.container .info .row-field{
+    width: 100%;
+    align-items: center;
+    justify-content: start;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.container .info .row-field .field1{
+    width: 50%;
+}
